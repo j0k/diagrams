@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-04T12:32:51.139Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36" etag="AFPmgNZuRTNZpxYP486C" version="16.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-04T13:36:08.068Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36" etag="5v11TfrNASMpy9e3_gkp" version="16.0.3" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="525" dy="261" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -32,6 +32,13 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="nw15DMsDSL3MZppzymeQ-22" value="ts4" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;" edge="1" parent="3nuBFxr9cyL0pnOWT2aG-1">
+          <mxGeometry x="-0.1667" y="-20" relative="1" as="geometry">
+            <mxPoint x="-15" y="210" as="sourcePoint" />
+            <mxPoint x="45" y="210" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="3nuBFxr9cyL0pnOWT2aG-5" value="laptop" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
           <mxGeometry x="300" y="80" width="100" height="300" as="geometry" />
         </mxCell>
@@ -52,8 +59,8 @@
             <mxPoint x="190" y="150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="3nuBFxr9cyL0pnOWT2aG-8" value="send video frame" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;exitX=0.968;exitY=0.384;exitDx=0;exitDy=0;exitPerimeter=0;shape=flexArrow;endSize=2.7333333333333334;opacity=60;startSize=1;width=4.761904761904762;entryX=-0.016;entryY=0.71;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="3nuBFxr9cyL0pnOWT2aG-2" target="3nuBFxr9cyL0pnOWT2aG-4" edge="1">
-          <mxGeometry x="-0.0372" y="6" relative="1" as="geometry">
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-8" value="send video frames (udp)" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;exitX=0.968;exitY=0.384;exitDx=0;exitDy=0;exitPerimeter=0;shape=flexArrow;endSize=2.7333333333333334;opacity=60;startSize=1;width=4.761904761904762;entryX=0.497;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="3nuBFxr9cyL0pnOWT2aG-2" target="3nuBFxr9cyL0pnOWT2aG-5" edge="1">
+          <mxGeometry x="0.0783" y="7" relative="1" as="geometry">
             <mxPoint x="195.10000000000002" y="223.09000000000003" as="sourcePoint" />
             <Array as="points" />
             <mxPoint as="offset" />
@@ -67,7 +74,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nw15DMsDSL3MZppzymeQ-13" value="latency = (ts2 - ts1)&amp;nbsp; &amp;nbsp; +&amp;nbsp; &amp;nbsp;(ts3-ts2)&amp;nbsp; &amp;nbsp;+&amp;nbsp; &amp;nbsp;(ts4-ts3)&amp;nbsp;&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nw15DMsDSL3MZppzymeQ-13" value="latency = (ts2 - ts1)&amp;nbsp; &amp;nbsp; +&amp;nbsp; &amp;nbsp;(ts3-ts2)&amp;nbsp; &amp;nbsp;+&amp;nbsp; &amp;nbsp;(ts5-ts3)&amp;nbsp;&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="130" y="390" width="280" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nw15DMsDSL3MZppzymeQ-14" value="video encoding" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
@@ -79,14 +86,28 @@
         <mxCell id="nw15DMsDSL3MZppzymeQ-16" value="receiving frame" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="370" y="220" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nw15DMsDSL3MZppzymeQ-18" value="ts4" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;entryX=0.718;entryY=1.059;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="nw15DMsDSL3MZppzymeQ-17">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="nw15DMsDSL3MZppzymeQ-18" value="ts5&#xa;" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;entryX=0.718;entryY=1.059;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="nw15DMsDSL3MZppzymeQ-17">
+          <mxGeometry x="-0.2074" y="37" relative="1" as="geometry">
             <mxPoint x="440" y="333" as="sourcePoint" />
             <mxPoint x="371.9799999999999" y="270.31999999999994" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nw15DMsDSL3MZppzymeQ-19" value="decoding" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="370" y="290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nw15DMsDSL3MZppzymeQ-21" value="number of fame (tcp)" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;shape=flexArrow;endSize=2.7333333333333334;opacity=60;startSize=1;width=4.761904761904762;fillColor=#d5e8d4;strokeColor=#82b366;exitX=0.505;exitY=0.637;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.048;entryY=0.679;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3nuBFxr9cyL0pnOWT2aG-5" target="3nuBFxr9cyL0pnOWT2aG-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="179.99999999999994" y="304.56" as="sourcePoint" />
+            <mxPoint x="354.99999999999994" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nw15DMsDSL3MZppzymeQ-23" value="send number of frame (tcp)" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;shape=flexArrow;endSize=2.7333333333333334;opacity=60;startSize=1;width=4.761904761904762;fillColor=#d5e8d4;strokeColor=#82b366;exitX=0.952;exitY=0.79;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.489;entryY=0.489;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="nw15DMsDSL3MZppzymeQ-8" target="3nuBFxr9cyL0pnOWT2aG-5">
+          <mxGeometry x="0.0603" y="12" relative="1" as="geometry">
+            <mxPoint x="360.4999999999999" y="281.1" as="sourcePoint" />
+            <mxPoint x="185.48000000000002" y="289.01" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
