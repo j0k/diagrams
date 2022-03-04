@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-04T12:25:19.770Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36" etag="BaJA25eiCsoxFUO-CmPw" version="16.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-04T12:32:51.139Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36" etag="AFPmgNZuRTNZpxYP486C" version="16.0.3" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="525" dy="261" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -23,7 +23,7 @@
           <mxGeometry x="40" y="90" width="20" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nw15DMsDSL3MZppzymeQ-9" value="encode&lt;br&gt;video frame" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="3nuBFxr9cyL0pnOWT2aG-1">
-          <mxGeometry x="-20" y="95" width="60" height="30" as="geometry" />
+          <mxGeometry x="-12.629999999999999" y="95" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nw15DMsDSL3MZppzymeQ-10" value="ts2" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;" edge="1" parent="3nuBFxr9cyL0pnOWT2aG-1">
           <mxGeometry x="-0.1667" y="-20" relative="1" as="geometry">
@@ -44,6 +44,9 @@
         <mxCell id="3nuBFxr9cyL0pnOWT2aG-4" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" parent="3nuBFxr9cyL0pnOWT2aG-5" vertex="1">
           <mxGeometry x="50" y="140" width="20" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="nw15DMsDSL3MZppzymeQ-17" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="3nuBFxr9cyL0pnOWT2aG-5">
+          <mxGeometry x="50" y="200" width="20" height="50" as="geometry" />
+        </mxCell>
         <mxCell id="3nuBFxr9cyL0pnOWT2aG-7" value="time sync" style="verticalAlign=bottom;endArrow=halfCircle;dashed=1;endSize=8;exitX=0.501;exitY=0.232;shadow=0;strokeWidth=1;endFill=0;startArrow=halfCircle;startFill=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.485;entryY=0.232;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="3nuBFxr9cyL0pnOWT2aG-5" target="3nuBFxr9cyL0pnOWT2aG-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="190" y="150" as="targetPoint" />
@@ -56,25 +59,34 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nw15DMsDSL3MZppzymeQ-12" value="ts3" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;entryX=0.599;entryY=1.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="3nuBFxr9cyL0pnOWT2aG-4">
+        <mxCell id="nw15DMsDSL3MZppzymeQ-12" value="ts3" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;entryX=1.095;entryY=0.629;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="3nuBFxr9cyL0pnOWT2aG-6">
           <mxGeometry x="-0.2056" y="18" relative="1" as="geometry">
-            <mxPoint x="440" y="260" as="sourcePoint" />
-            <mxPoint x="360" y="290" as="targetPoint" />
+            <mxPoint x="440" y="270" as="sourcePoint" />
+            <mxPoint x="360" y="260" as="targetPoint" />
             <mxPoint as="offset" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nw15DMsDSL3MZppzymeQ-13" value="latency = (ts2 - ts1)&amp;nbsp; &amp;nbsp; +&amp;nbsp; &amp;nbsp;(ts3-ts2)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="130" y="390" width="240" height="30" as="geometry" />
+        <mxCell id="nw15DMsDSL3MZppzymeQ-13" value="latency = (ts2 - ts1)&amp;nbsp; &amp;nbsp; +&amp;nbsp; &amp;nbsp;(ts3-ts2)&amp;nbsp; &amp;nbsp;+&amp;nbsp; &amp;nbsp;(ts4-ts3)&amp;nbsp;&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="390" width="280" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nw15DMsDSL3MZppzymeQ-14" value="video encoding" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="420" width="60" height="30" as="geometry" />
+          <mxGeometry x="190" y="420" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nw15DMsDSL3MZppzymeQ-15" value="net" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="290" y="410" width="60" height="30" as="geometry" />
+          <mxGeometry x="270" y="410" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nw15DMsDSL3MZppzymeQ-16" value="receiving frame" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="370" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nw15DMsDSL3MZppzymeQ-18" value="ts4" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;entryX=0.718;entryY=1.059;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="nw15DMsDSL3MZppzymeQ-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="333" as="sourcePoint" />
+            <mxPoint x="371.9799999999999" y="270.31999999999994" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nw15DMsDSL3MZppzymeQ-19" value="decoding" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="290" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
